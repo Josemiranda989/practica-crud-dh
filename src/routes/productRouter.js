@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = ({ storage: storage });
+const upload = multer({ storage });
 
 router.get("/list", productController.list);
 router.get("/detail/:id", productController.detail);
